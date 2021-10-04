@@ -9,7 +9,7 @@
  */
 
 //Definimos el array
-let array1 = [0, 88, 34, 67, 12, 90, 23, 34, 49 ,44];
+let array1 = [0, 88, 34, 67, 12, 90, 23, 34, 49, 44];
 
 
 
@@ -31,10 +31,10 @@ console.log("La media aritmetica del array es: " + avg);
 if (array1.length%2 == 0) {
     pos1 = array1.length/2;
     pos2 = pos1 - 1;
-    mediana = (pos1 - pos2) / 2;
+    mediana = (array1[pos1] + array1[pos2]) / 2;
 } else {
     pos_central = (array1.length - 1) / 2;
-    mediana = pos_central;
+    mediana = array1[pos_central];
 }
 
 //Imprimimos en consola la mediana del array
