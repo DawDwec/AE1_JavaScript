@@ -41,7 +41,7 @@ function mediana(arr){
     /*Obtenemos el elemento medio. En caso de que la longitud del array sea 0, obtenemos la media de los dos
     elementos del medio. Si tuvieramos un array de 8 elementos, sería el 4 y 5*/
     return arrOrdenado.length % 2 === 0 ? (arrOrdenado[arrOrdenado.length/2 - 1] + arrOrdenado[arrOrdenado.length/2]) / 2 : arrOrdenado[Math.floor(arrOrdenado.length/2)];
-
+    //Anotar que cuando hay dos datos en el centro (10 valores -> 2 valores centrales a y b) Para calcularlo se suma el valor de A y B, dividido entre 2 [(A+B)/2] por esta razón como introducimos 10 valores queda un valor decimal
 }
 
 /*3.Calculo de la Moda.
@@ -80,7 +80,17 @@ return modas;
 }
 
 //Definimos el array de 10 numeros.
-const datos = [25,16,22,52,66,25,62,73,25,1];
+//El ejercicio también se puede hacer introduciendo a mano el array -> const datos = [25,16,22,52,66,25,62,73,25,1];
+//*Recomendable usar el ejemplo de array puesto en la línea anterior a mano para que se repitan 2 números y se compruebe el resultado para la moda, ya que es muy dificil que aleatoriamente el programa genere 2 valores iguales.
+
+
+//Nos aseguramos con la condicion que los numeros introducidos estaran comprendidos entre 1 y 100
+const datos = [];
+while(datos.length<10){
+  //Generamos valores aleatorios comprendidos entre 1 y 100  
+  var random = Math.ceil(1 + Math.floor(Math.random() * 100));
+  datos.push(random);
+  }
 
 //Sacamos por pantalla los resultados de la media aritmetica, la mediana y moda.
 console.log(`Los datos introducidos son: ${datos}`);
